@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
+  <title>Companions</title>
+</head>
+
+<body>
+  <main>
+    <section class="companions">
+      <div class="container">
+        <div class="companions__wrapper">
+          <!-- форма -->
+          <form class="filter-form" action="#" method="POST">
+            <h1 class="filter-form__header">Подберите идеального попутчика</h1>
+            <div class="filter-form__wrapper">
+              <!-- Хобби } -->
+              <div class="filter-form__group">
+                <span class="filter-form__group-title">Хобби<span>:</span></span>
+                <button class="filter-form__group-btn" type="button">
+                  <svg class="filter-form__group-btn-icon" width="9" height="5" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <ul class="filter-form__checkbox-list">
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="gym" name="interest"
+                        checked>
+                      <label class="custom-checkbox__label" for="gym">Спортзал</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="hookah" name="interest">
+                      <label class="custom-checkbox__label" for="hookah">Кальян</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="sofa" name="interest">
+                      <label class="custom-checkbox__label" for="sofa">Диван</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Музыка -->
+              <div class="filter-form__group filter-form__group--open">
+                <span class="filter-form__group-title">Музыка<span>:</span></span>
+                <button class="filter-form__group-btn" type="button">
+                  <svg class="filter-form__group-btn-icon" width="9" height="5" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <ul class="filter-form__checkbox-list">
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="hard-rock" name="music"
+                        checked>
+                      <label class="custom-checkbox__label" for="hard-rock">Тяжелый рок</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="russian-rap"
+                        name="music">
+                      <label class="custom-checkbox__label" for="russian-rap">Русский рэп</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="eurodance" name="music">
+                      <label class="custom-checkbox__label" for="eurodance">Евроденс</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Еда -->
+              <div class="filter-form__group">
+                <span class="filter-form__group-title">Еда<span>:</span></span>
+                <button class="filter-form__group-btn" type="button">
+                  <svg class="filter-form__group-btn-icon" width="9" height="5" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <ul class="filter-form__checkbox-list">
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="meat-eater" name="food"
+                        checked>
+                      <label class="custom-checkbox__label" for="meat-eater">Мясоед</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="propper-food"
+                        name="food">
+                      <label class="custom-checkbox__label" for="propper-food">Сидит на ПП</label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="raw-vegan" name="food">
+                      <label class="custom-checkbox__label" for="raw-vegan">Веган-сыроед</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Транспорт } -->
+              <div class="filter-form__group filter-form__group--alt filter-form__group--open">
+                <span class="filter-form__group-title">Транспорт<span>:</span></span>
+                <button class="filter-form__group-btn" type="button">
+                  <svg class="filter-form__group-btn-icon" width="9" height="5" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <ul class="filter-form__checkbox-list">
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-plane"
+                        name="transport" checked>
+                      <label class="custom-checkbox__label" for="transport-plane">
+                        <svg class="custom-checkbox__transport-icon" width="22" height="22" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-bus"
+                        name="transport" checked>
+                      <label class="custom-checkbox__label" for="transport-bus">
+                        <svg class="custom-checkbox__transport-icon" width="18" height="20" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-bicycle"
+                        name="transport">
+                      <label class="custom-checkbox__label" for="transport-bicycle">
+                        <svg class="custom-checkbox__transport-icon" width="25" height="25" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_bicycle"></use>
+                        </svg>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="filter-form__checkbox-item">
+                    <div class="custom-checkbox">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-walk"
+                        name="transport" checked>
+                      <label class="custom-checkbox__label" for="transport-walk">
+                        <svg class="custom-checkbox__transport-icon" width="22" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_walk"></use>
+                        </svg>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Левел } -->
+              <div class="filter-form__group slider filter-form__group--open">
+                <span class="filter-form__group-title">Левел<span>:</span></span>
+                <button class="filter-form__group-btn" type="button">
+                  <svg class="filter-form__group-btn-icon" width="9" height="5" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="slider__wrapper">
+                  <div class="slider__toddler" id="price-slider"></div>
+                  <div class="slider__value">
+                    <input class="slider__min" type="number" id="min-input" placeholder="От">
+                    <input class="slider__max" type="number" id="max-input" placeholder="До">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <button class="filter-form__btn btn" type="submit">Показать</button>
+          </form>
+          <!-- люди -->
+          <ul class="companions__list">
+            <!-- Таня Фирсова -->
+            <li class="companions__item">
+              <div class="companions__card card">
+                <div class="card__top">
+                  <picture>
+                    <source media="(max-width: 679px)" srcset="images/photo/tanya-firsova-mobile.png">
+                    <img class="card__img" src="images/photo/tanya-firsova.png" alt="Таня Фирсова" width="285"
+                      height="285">
+                  </picture>
+                  <div class="card__info card__info--color-light-coral">
+                    <h2 class="card__name">Таня Фирсова</h2>
+                    <div class="card__hashtags">
+                      <span>#ЗОЖ</span>
+                      <span>#ПП</span>
+                      <span>#Фитнес</span>
+                      <span>#пляж</span>
+                      <span>#авокадо</span>
+                      <span>#смузи</span>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="card__invite">
+                        <button class="btn btn--invite" type="button">Позвать!</button>
+                      </div>
+                      <div class="card__like">
+                        <button class="btn btn--like btn--like--active" type="button">
+                          <svg class="btn__like-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                            viewBox="0 0 21 18" fill="none">
+                            <path class="btn__like-red" fill="CurrentColor" opacity="0.9"
+                              d="M5.007 0c2.767 0 5.008 2.194 5.008 4.9 0-2.706 2.24-4.9 5.007-4.9s5.007 2.194 5.007 4.9c0 4.079-4.048 5.518-9.524 12.01a.643.643 0 0 1-.981 0C4.048 10.418 0 8.979 0 4.9 0 2.194 2.24 0 5.007 0" />
+                            <path class="btn__like-border" fill="CurrentColor" fill-rule="evenodd" opacity="0.9"
+                              d="m10.015 6.874 1.119-2.348c.278-.582.76-1.418 1.442-2.095.67-.665 1.474-1.118 2.446-1.118 2.098 0 3.755 1.74 3.755 3.834 0 1.59-.693 2.712-2.338 4.424-.422.439-.903.912-1.435 1.435-1.387 1.365-3.112 3.064-4.99 5.336-1.877-2.272-3.602-3.97-4.99-5.336A74 74 0 0 1 3.59 9.571C1.945 7.86 1.252 6.737 1.252 5.147c0-2.093 1.657-3.834 3.755-3.834.972 0 1.775.453 2.446 1.118.683.677 1.165 1.513 1.442 2.095zm.49 10.887a.65.65 0 0 1-.22.176.62.62 0 0 1-.761-.176c-2.004-2.497-3.818-4.283-5.312-5.752C1.627 9.463 0 7.863 0 5.147 0 2.304 2.24 0 5.007 0 7.01 0 8.411 1.379 9.268 2.636c.326.48.574.94.747 1.303q.324-.682.746-1.303C11.618 1.377 13.019 0 15.02 0c2.767 0 5.008 2.304 5.008 5.147 0 2.716-1.627 4.316-4.212 6.862-1.494 1.47-3.308 3.256-5.312 5.75z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                        <span class="card__like-counter">1.5 M</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__inner">
+                    <span class="card__transport-header">транспорт:</span>
+                    <ul class="card__transport-list">
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="22" height="22" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="18" height="20" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="25" height="25" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="22" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_walk"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="card__level">
+                      <svg class="card__level-bar" width="63" height="63" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.936 1.84468C19.2903 3.02155 12.3947 7.10636 7.68897 13.2462C2.98324 19.3861 0.83115 27.1064 1.68203 34.7953C2.53291 42.4841 6.32098 49.547 12.2553 54.5095C18.1897 59.4719 25.8116 61.9501 33.5296 61.4267C41.2477 60.9034 48.4652 57.4189 53.6753 51.7008C58.8854 45.9827 61.6854 38.473 61.4905 30.7397C61.2956 23.0064 58.121 15.6473 52.6295 10.1989C47.1379 4.75045 39.754 1.63392 32.0194 1.49998"
+                          stroke="#FF8D30" stroke-width="3" stroke-linecap="round" stroke-dasharray="188.4"
+                          stroke-dashoffset="calc(188.4 - (188.4 * var(--progress) / 100))" />
+                      </svg>
+                      <span class="card__level-percent">99</span>
+                      <span class="card__level-text">level</span>
+                      <span class="card__level-text-mobile">левел</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__countries">
+                  <span class="card__countries-title">хочет посетить:</span>
+                  <ul class="card__countries-list">
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/srilanka.png" alt="шри-ланка">
+                      <span class="card__countries-text">шри-ланка</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/thailand.png" alt="Таиланд">
+                      <span class="card__countries-text">Таиланд</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/seychelles.png" alt="сейшелы">
+                      <span class="card__countries-text">сейшелы</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Петя Демин -->
+            <li class="companions__item">
+              <div class="companions__card card">
+                <div class="card__top">
+                  <picture>
+                    <source media="(max-width: 679px)" srcset="images/photo/petya-demin-mobile.png">
+                    <img class="card__img" src="images/photo/petya-demin.png" alt="Петя Демин" width="285" height="285">
+                  </picture>
+                  <div class="card__info card__info--color-light-coral">
+                    <h2 class="card__name">Петя Демин</h2>
+                    <div class="card__hashtags">
+                      <span>#бургер</span>
+                      <span>#бар</span>
+                      <span>#футбол</span>
+                      <span>#концерт</span>
+                      <span>#крафт</span>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="card__invite">
+                        <button class="btn btn--invite" type="button">Позвать!</button>
+                      </div>
+                      <div class="card__like">
+                        <button class="btn btn--like" type="button">
+                          <svg class="btn__like-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                            viewBox="0 0 21 18" fill="none">
+                            <path class="btn__like-red" fill="CurrentColor" opacity="0.9"
+                              d="M5.007 0c2.767 0 5.008 2.194 5.008 4.9 0-2.706 2.24-4.9 5.007-4.9s5.007 2.194 5.007 4.9c0 4.079-4.048 5.518-9.524 12.01a.643.643 0 0 1-.981 0C4.048 10.418 0 8.979 0 4.9 0 2.194 2.24 0 5.007 0" />
+                            <path class="btn__like-border" fill="CurrentColor" fill-rule="evenodd" opacity="0.9"
+                              d="m10.015 6.874 1.119-2.348c.278-.582.76-1.418 1.442-2.095.67-.665 1.474-1.118 2.446-1.118 2.098 0 3.755 1.74 3.755 3.834 0 1.59-.693 2.712-2.338 4.424-.422.439-.903.912-1.435 1.435-1.387 1.365-3.112 3.064-4.99 5.336-1.877-2.272-3.602-3.97-4.99-5.336A74 74 0 0 1 3.59 9.571C1.945 7.86 1.252 6.737 1.252 5.147c0-2.093 1.657-3.834 3.755-3.834.972 0 1.775.453 2.446 1.118.683.677 1.165 1.513 1.442 2.095zm.49 10.887a.65.65 0 0 1-.22.176.62.62 0 0 1-.761-.176c-2.004-2.497-3.818-4.283-5.312-5.752C1.627 9.463 0 7.863 0 5.147 0 2.304 2.24 0 5.007 0 7.01 0 8.411 1.379 9.268 2.636c.326.48.574.94.747 1.303q.324-.682.746-1.303C11.618 1.377 13.019 0 15.02 0c2.767 0 5.008 2.304 5.008 5.147 0 2.716-1.627 4.316-4.212 6.862-1.494 1.47-3.308 3.256-5.312 5.75z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                        <span class="card__like-counter">1500</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__inner">
+                    <span class="card__transport-header">транспорт:</span>
+                    <ul class="card__transport-list">
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="22" height="22" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="18" height="20" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="25" height="25" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="22" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_walk"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="card__level">
+                      <svg class="card__level-bar" width="63" height="63" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.936 1.84468C19.2903 3.02155 12.3947 7.10636 7.68897 13.2462C2.98324 19.3861 0.83115 27.1064 1.68203 34.7953C2.53291 42.4841 6.32098 49.547 12.2553 54.5095C18.1897 59.4719 25.8116 61.9501 33.5296 61.4267C41.2477 60.9034 48.4652 57.4189 53.6753 51.7008C58.8854 45.9827 61.6854 38.473 61.4905 30.7397C61.2956 23.0064 58.121 15.6473 52.6295 10.1989C47.1379 4.75045 39.754 1.63392 32.0194 1.49998"
+                          stroke="#FF8D30" stroke-width="3" stroke-linecap="round" stroke-dasharray="188.4"
+                          stroke-dashoffset="calc(188.4 - (188.4 * var(--progress) / 100))" />
+                      </svg>
+                      <span class="card__level-percent">80</span>
+                      <span class="card__level-text">level</span>
+                      <span class="card__level-text-mobile">левел</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__countries">
+                  <span class="card__countries-title">хочет посетить:</span>
+                  <ul class="card__countries-list">
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/belgium.png" alt="бельгия">
+                      <span class="card__countries-text">бельгия</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/czech.png" alt="чехия">
+                      <span class="card__countries-text">чехия</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Марк Смолов -->
+            <li class="companions__item">
+              <div class="companions__card card">
+                <div class="card__top">
+                  <picture>
+                    <source media="(max-width: 679px)" srcset="images/photo/mark-smolov-mobile.png">
+                    <img class="card__img" src="images/photo/mark-smolov.png" alt="Марк Смолов" width="285"
+                      height="285">
+                  </picture>
+                  <div class="card__info card__info--color-light-coral">
+                    <h2 class="card__name">Марк Смолов</h2>
+                    <div class="card__hashtags">
+                      <span>#рэп</span>
+                      <span>#тату</span>
+                      <span>#хайпбист</span>
+                      <span>#кроссовки</span>
+                      <span>#суприм</span>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="card__invite">
+                        <button class="btn btn--invite" type="button">Позвать!</button>
+                      </div>
+                      <div class="card__like">
+                        <button class="btn btn--like" type="button">
+                          <svg class="btn__like-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                            viewBox="0 0 21 18" fill="none">
+                            <path class="btn__like-red" fill="CurrentColor" opacity="0.9"
+                              d="M5.007 0c2.767 0 5.008 2.194 5.008 4.9 0-2.706 2.24-4.9 5.007-4.9s5.007 2.194 5.007 4.9c0 4.079-4.048 5.518-9.524 12.01a.643.643 0 0 1-.981 0C4.048 10.418 0 8.979 0 4.9 0 2.194 2.24 0 5.007 0" />
+                            <path class="btn__like-border" fill="CurrentColor" fill-rule="evenodd" opacity="0.9"
+                              d="m10.015 6.874 1.119-2.348c.278-.582.76-1.418 1.442-2.095.67-.665 1.474-1.118 2.446-1.118 2.098 0 3.755 1.74 3.755 3.834 0 1.59-.693 2.712-2.338 4.424-.422.439-.903.912-1.435 1.435-1.387 1.365-3.112 3.064-4.99 5.336-1.877-2.272-3.602-3.97-4.99-5.336A74 74 0 0 1 3.59 9.571C1.945 7.86 1.252 6.737 1.252 5.147c0-2.093 1.657-3.834 3.755-3.834.972 0 1.775.453 2.446 1.118.683.677 1.165 1.513 1.442 2.095zm.49 10.887a.65.65 0 0 1-.22.176.62.62 0 0 1-.761-.176c-2.004-2.497-3.818-4.283-5.312-5.752C1.627 9.463 0 7.863 0 5.147 0 2.304 2.24 0 5.007 0 7.01 0 8.411 1.379 9.268 2.636c.326.48.574.94.747 1.303q.324-.682.746-1.303C11.618 1.377 13.019 0 15.02 0c2.767 0 5.008 2.304 5.008 5.147 0 2.716-1.627 4.316-4.212 6.862-1.494 1.47-3.308 3.256-5.312 5.75z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                        <span class="card__like-counter">170</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__inner">
+                    <span class="card__transport-header">транспорт:</span>
+                    <ul class="card__transport-list">
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="22" height="22" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="18" height="20" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="25" height="25" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="22" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_walk"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="card__level">
+                      <svg class="card__level-bar" width="63" height="63" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.936 1.84468C19.2903 3.02155 12.3947 7.10636 7.68897 13.2462C2.98324 19.3861 0.83115 27.1064 1.68203 34.7953C2.53291 42.4841 6.32098 49.547 12.2553 54.5095C18.1897 59.4719 25.8116 61.9501 33.5296 61.4267C41.2477 60.9034 48.4652 57.4189 53.6753 51.7008C58.8854 45.9827 61.6854 38.473 61.4905 30.7397C61.2956 23.0064 58.121 15.6473 52.6295 10.1989C47.1379 4.75045 39.754 1.63392 32.0194 1.49998"
+                          stroke="#FF8D30" stroke-width="3" stroke-linecap="round" stroke-dasharray="188.4"
+                          stroke-dashoffset="calc(188.4 - (188.4 * var(--progress) / 100))" />
+                      </svg>
+                      <span class="card__level-percent">25</span>
+                      <span class="card__level-text">level</span>
+                      <span class="card__level-text-mobile">левел</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__countries">
+                  <span class="card__countries-title">хочет посетить:</span>
+                  <ul class="card__countries-list">
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/usa.png" alt="сша">
+                      <span class="card__countries-text">сша</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/australia.png" alt="австралия">
+                      <span class="card__countries-text">австралия</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/dominica.png" alt="доминика">
+                      <span class="card__countries-text">доминика</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Лариса Роговая -->
+            <li class="companions__item">
+              <div class="companions__card card">
+                <div class="card__top">
+                  <picture>
+                    <source media="(max-width: 679px)" srcset="images/photo/larisa-rogovaya-mobile.png">
+                    <img class="card__img" src="images/photo/larisa-rogovaya.png" alt="Лариса Роговая" width="285"
+                      height="285">
+                  </picture>
+                  <div class="card__info card__info--color-light-green">
+                    <h2 class="card__name">Лариса Роговая</h2>
+                    <div class="card__hashtags">
+                      <span>#образование</span>
+                      <span>#карьера</span>
+                      <span>#учеба</span>
+                      <span>#линкедин</span>
+                    </div>
+                    <div class="card__buttons">
+                      <div class="card__invite">
+                        <button class="btn btn--invite" type="button">Позвать!</button>
+                      </div>
+                      <div class="card__like">
+                        <button class="btn btn--like" type="button">
+                          <svg class="btn__like-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18"
+                            viewBox="0 0 21 18" fill="none">
+                            <path class="btn__like-red" fill="CurrentColor" opacity="0.9"
+                              d="M5.007 0c2.767 0 5.008 2.194 5.008 4.9 0-2.706 2.24-4.9 5.007-4.9s5.007 2.194 5.007 4.9c0 4.079-4.048 5.518-9.524 12.01a.643.643 0 0 1-.981 0C4.048 10.418 0 8.979 0 4.9 0 2.194 2.24 0 5.007 0" />
+                            <path class="btn__like-border" fill="CurrentColor" fill-rule="evenodd" opacity="0.9"
+                              d="m10.015 6.874 1.119-2.348c.278-.582.76-1.418 1.442-2.095.67-.665 1.474-1.118 2.446-1.118 2.098 0 3.755 1.74 3.755 3.834 0 1.59-.693 2.712-2.338 4.424-.422.439-.903.912-1.435 1.435-1.387 1.365-3.112 3.064-4.99 5.336-1.877-2.272-3.602-3.97-4.99-5.336A74 74 0 0 1 3.59 9.571C1.945 7.86 1.252 6.737 1.252 5.147c0-2.093 1.657-3.834 3.755-3.834.972 0 1.775.453 2.446 1.118.683.677 1.165 1.513 1.442 2.095zm.49 10.887a.65.65 0 0 1-.22.176.62.62 0 0 1-.761-.176c-2.004-2.497-3.818-4.283-5.312-5.752C1.627 9.463 0 7.863 0 5.147 0 2.304 2.24 0 5.007 0 7.01 0 8.411 1.379 9.268 2.636c.326.48.574.94.747 1.303q.324-.682.746-1.303C11.618 1.377 13.019 0 15.02 0c2.767 0 5.008 2.304 5.008 5.147 0 2.716-1.627 4.316-4.212 6.862-1.494 1.47-3.308 3.256-5.312 5.75z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                        <span class="card__like-counter">23</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__inner">
+                    <span class="card__transport-header">транспорт:</span>
+                    <ul class="card__transport-list">
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="22" height="22" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item card__transport-item--active">
+                        <svg class="card__transport-item-icon" width="18" height="20" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="25" height="25" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="card__transport-item">
+                        <svg class="card__transport-item-icon" width="22" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon_walk"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                    <div class="card__level">
+                      <svg class="card__level-bar" width="63" height="63" viewBox="0 0 63 63" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M26.936 1.84468C19.2903 3.02155 12.3947 7.10636 7.68897 13.2462C2.98324 19.3861 0.83115 27.1064 1.68203 34.7953C2.53291 42.4841 6.32098 49.547 12.2553 54.5095C18.1897 59.4719 25.8116 61.9501 33.5296 61.4267C41.2477 60.9034 48.4652 57.4189 53.6753 51.7008C58.8854 45.9827 61.6854 38.473 61.4905 30.7397C61.2956 23.0064 58.121 15.6473 52.6295 10.1989C47.1379 4.75045 39.754 1.63392 32.0194 1.49998"
+                          stroke="#FF8D30" stroke-width="3" stroke-linecap="round" stroke-dasharray="188.4"
+                          stroke-dashoffset="calc(188.4 - (188.4 * var(--progress) / 100))" />
+                      </svg>
+                      <span class="card__level-percent">50</span>
+                      <span class="card__level-text">level</span>
+                      <span class="card__level-text-mobile">левел</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__countries">
+                  <span class="card__countries-title">хочет посетить:</span>
+                  <ul class="card__countries-list">
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/uk.png" alt="Великобритания">
+                      <span class="card__countries-text">Великобритания</span>
+                    </li>
+                    <li class="card__countries-item">
+                      <img class="card__countries-img" src="images/flags/germany.png" alt="Германия">
+                      <span class="card__countries-text">Германия</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

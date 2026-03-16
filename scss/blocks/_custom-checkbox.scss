@@ -1,0 +1,126 @@
+.custom-checkbox {
+	&__label {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		gap: 12px;
+		font-size: 20px;
+		line-height: 20px;
+		color: $color-black;
+		cursor: pointer;
+		user-select: none;
+		position: relative;
+		text-wrap: nowrap;
+		transition: color $transition-200;
+
+		@include vp-680 {
+			font-size: 15px;
+			gap: 9px;
+			align-items: flex-start;
+		}
+
+		&::before {
+			content: '';
+			width: 24px;
+			height: 24px;
+			background-color: $color-white;
+			border-radius: 4px;
+			flex-shrink: 0;
+
+			@include vp-680 {
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 6px;
+			top: 2px;
+
+			@include vp-680 {
+				left: 4px;
+				top: 0;
+				transform: scale(0.7);
+			}
+		}
+	}
+
+	&__field:checked + &__label::after {
+		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='12' fill='none'%3E%3Cpath fill='%23161c35' d='M3.384 11.18 0 7.5V6c0-.04 0 .04 0 0V4.5l3.375 3.256c.115.122.304.12.42-.001L10.992 0v3.5l-6.187 6.62.001.002-1.002 1.058a.29.29 0 0 1-.42 0'/%3E%3C/svg%3E");
+	}
+
+	&__field:not(:disabled) + &__label:hover,
+	&__field:focus-visible + &__label {
+		color: $color-carrot-orange;
+	}
+
+	&__field:disabled + &__label {
+		opacity: 0.5;
+	}
+
+	// круглые чекбоксы
+	.filter-form__group--alt & {
+		.custom-checkbox__label {
+			width: 44px;
+			height: 44px;
+			background-color: #fff;
+			border-radius: 50%;
+			justify-content: center;
+			align-items: center;
+
+			@include vp-680 {
+				width: 32px;
+				height: 32px;
+			}
+
+			&::before,
+			&::after {
+				content: none;
+			}
+
+			&:hover .custom-checkbox__transport-icon {
+				color: $color-carrot-orange;
+				opacity: 0.5;
+			}
+		}
+
+		.custom-checkbox__field:focus-visible
+			+ .custom-checkbox__label
+			.custom-checkbox__transport-icon {
+			color: $color-carrot-orange;
+			opacity: 0.5;
+		}
+
+		.custom-checkbox__transport-icon {
+			width: 23px;
+			height: 22px;
+			color: $color-deep-navy;
+			opacity: 0.15;
+			transition:
+				opacity $transition-200,
+				color $transition-200;
+
+				@include vp-680 {
+					width: 17px;
+					height: 16px;
+				}
+		}
+
+		.custom-checkbox__field:checked
+			+ .custom-checkbox__label
+			.custom-checkbox__transport-icon {
+			opacity: 1;
+		}
+
+		.custom-checkbox__field:checked
+			+ .custom-checkbox__label:hover
+			.custom-checkbox__transport-icon,
+		.custom-checkbox__field:checked:focus-visible
+			+ .custom-checkbox__label
+			.custom-checkbox__transport-icon {
+			color: $color-carrot-orange;
+		}
+	}
+}

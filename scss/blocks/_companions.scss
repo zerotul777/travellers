@@ -1,0 +1,49 @@
+.companions {
+	padding: 0 0 60px;
+	
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+    @include vp-1 {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+		@include vp-1280 {
+			gap: 32px;
+		}
+
+		@include vp-680 {
+			gap: 10px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		@include vp-1280 {
+			display: grid;
+			grid-template-columns: 1fr 286px;
+			gap: 30px;
+		}
+
+		@include vp-1360 {
+			gap: 93px;
+		}
+
+		@include vp-680 {
+			gap: 24px;
+		}
+	}
+
+	&__card {
+		width: 100%;
+	}
+}
