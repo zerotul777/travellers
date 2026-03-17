@@ -18,6 +18,7 @@
           <!-- форма -->
           <form class="filter-form" action="#" method="POST">
             <h1 class="filter-form__header">Подберите идеального попутчика</h1>
+            <span class="filter-form__header filter-form__header--alt">Вы выбрали:</span>
             <div class="filter-form__wrapper">
               <!-- Хобби } -->
               <div class="filter-form__group">
@@ -31,19 +32,21 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="gym" name="interest"
-                        checked>
+                        value="Спортзал" checked>
                       <label class="custom-checkbox__label" for="gym">Спортзал</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
-                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="hookah" name="interest">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="hookah" name="interest"
+                        value="Кальян">
                       <label class="custom-checkbox__label" for="hookah">Кальян</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
-                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="sofa" name="interest">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="sofa" name="interest"
+                        value="Диван">
                       <label class="custom-checkbox__label" for="sofa">Диван</label>
                     </div>
                   </li>
@@ -61,20 +64,21 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="hard-rock" name="music"
-                        checked>
+                        value="Тяжелый рок" checked>
                       <label class="custom-checkbox__label" for="hard-rock">Тяжелый рок</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="russian-rap"
-                        name="music">
+                        value="Русский рэп" name="music">
                       <label class="custom-checkbox__label" for="russian-rap">Русский рэп</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
-                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="eurodance" name="music">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="eurodance"
+                        value="Евроденс" name="music">
                       <label class="custom-checkbox__label" for="eurodance">Евроденс</label>
                     </div>
                   </li>
@@ -92,20 +96,21 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="meat-eater" name="food"
-                        checked>
+                        value="Мясоед" checked>
                       <label class="custom-checkbox__label" for="meat-eater">Мясоед</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="propper-food"
-                        name="food">
+                        name="food" value="Сидит на ПП">
                       <label class="custom-checkbox__label" for="propper-food">Сидит на ПП</label>
                     </div>
                   </li>
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
-                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="raw-vegan" name="food">
+                      <input class="custom-checkbox__field visually-hidden" type="checkbox" id="raw-vegan"
+                        value="Веган-сыроед" name="food">
                       <label class="custom-checkbox__label" for="raw-vegan">Веган-сыроед</label>
                     </div>
                   </li>
@@ -123,7 +128,7 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-plane"
-                        name="transport" checked>
+                        value="Самолет" name="transport" checked>
                       <label class="custom-checkbox__label" for="transport-plane">
                         <svg class="custom-checkbox__transport-icon" width="22" height="22" aria-hidden="true">
                           <use xlink:href="images/sprite.svg#icon-plane"></use>
@@ -134,7 +139,7 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-bus"
-                        name="transport" checked>
+                        value="Автобус" name="transport" checked>
                       <label class="custom-checkbox__label" for="transport-bus">
                         <svg class="custom-checkbox__transport-icon" width="18" height="20" aria-hidden="true">
                           <use xlink:href="images/sprite.svg#icon-bus"></use>
@@ -145,7 +150,7 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-bicycle"
-                        name="transport">
+                        value="Велосипед" name="transport">
                       <label class="custom-checkbox__label" for="transport-bicycle">
                         <svg class="custom-checkbox__transport-icon" width="25" height="25" aria-hidden="true">
                           <use xlink:href="images/sprite.svg#icon_bicycle"></use>
@@ -156,7 +161,7 @@
                   <li class="filter-form__checkbox-item">
                     <div class="custom-checkbox">
                       <input class="custom-checkbox__field visually-hidden" type="checkbox" id="transport-walk"
-                        name="transport" checked>
+                        value="Пешком" name="transport" checked>
                       <label class="custom-checkbox__label" for="transport-walk">
                         <svg class="custom-checkbox__transport-icon" width="22" height="24" aria-hidden="true">
                           <use xlink:href="images/sprite.svg#icon_walk"></use>
@@ -183,8 +188,11 @@
                 </div>
 
               </div>
+
             </div>
-            <button class="filter-form__btn btn" type="submit">Показать</button>
+            <div class="filter-form__result"></div>
+            <button class="filter-form__btn-submit btn" type="submit">Показать</button>
+            <button class="filter-form__btn-reset btn" type="reset">Спасибо</button>
           </form>
           <!-- люди -->
           <ul class="companions__list">

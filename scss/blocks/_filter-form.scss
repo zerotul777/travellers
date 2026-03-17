@@ -1,207 +1,307 @@
 .filter-form {
-	padding: 34px 36px 37px 34px;
-	height: fit-content;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	background-color: $color-pantone;
-	border-radius: 20px;
+  padding: 34px 36px 37px 34px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: $color-pantone;
+  border-radius: 20px;
 
-	@include vp-1280 {
-		position: sticky;
-		top: 0;
-		grid-column: 2;
-		padding: 46px 48px 44px;
-	}
+  @include vp-1280 {
+    position: sticky;
+    top: 0;
+    grid-column: 2;
+    padding: 46px 48px 44px;
+  }
 
-	@include vp-680 {
-		padding: 24px 20px 26px;
-	}
+  @include vp-680 {
+    padding: 24px 20px 26px;
+  }
 
-	&__header {
-		margin: 0 0 30px;
-		font-family: $ff-main;
-		font-size: 30px;
-		line-height: 30px;
-		font-weight: 700;
-		color: $color-deep-navy;
+  &__header {
+    margin: 0 0 30px;
+    font-family: $ff-main;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: $color-deep-navy;
 
-		@include vp-1280 {
-			margin: 0 0 4px;
-		}
+    @include vp-1280 {
+      margin: 0 0 4px;
+    }
 
-		@include vp-680 {
-			font-size: 22px;
-			line-height: 22px;
-			letter-spacing: 0.02em;
-			margin: 0 5px 4px;
-		}
-	}
+    @include vp-680 {
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      margin: 0 5px 4px;
+    }
 
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		padding: 10px 0 46px;
-		border-top: 1px solid $color-plain-english;
-		border-bottom: 1px solid $color-plain-english;
+    .filter-form--result & {
+      display: none;
+    }
 
-		@include vp-1 {
-			border: none;
-			padding: 10px 0 16px;
-			gap: 0;
-		}
+    &--alt {
+      display: none;
 
-		@include vp-680 {
-			padding: 10px 0 0;
-			margin: 0 5px;
-		}
-	}
+      .filter-form--result & {
+        display: flex;
+      }
 
-	&__checkbox-list {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-		transition:
-			max-height $transition-300,
-			clip-path $transition-300,
-			padding $transition-300;
+      @include vp-680 {
+        margin: 0 0 20px;
+      }
+    }
+  }
 
-		@include vp-1 {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			max-height: 0;
-			gap: 16px;
-			clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-		}
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 46px;
+    border-top: 1px solid $color-plain-english;
+    border-bottom: 1px solid $color-plain-english;
 
-		@include vp-680 {
-			gap: 10px;
-		}
+    @include vp-1 {
+      border: none;
+      padding: 10px 0 16px;
+      gap: 0;
+    }
 
-		.filter-form__group--open & {
-			@include vp-1 {
-				max-height: 300px;
-				padding: 17px 0 20px;
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-			}
+    @include vp-680 {
+      padding: 10px 0 0;
+      margin: 0 5px;
+    }
 
-			@include vp-680 {
-				padding: 6px 0 18px;
-			}
-		}
+    .filter-form--result & {
+      display: none;
+    }
+  }
 
-		.filter-form__group--alt.filter-form__group--open & {
-			@include vp-1280 {
-				padding: 12px 0 23px;
-			}
+  &__checkbox-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    transition:
+      max-height $transition-300,
+      clip-path $transition-300,
+      padding $transition-300;
 
-			@include vp-680 {
-				padding: 8px 0 19px;
-			}
-		}
-	}
+    @include vp-1 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      max-height: 0;
+      gap: 16px;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
 
-	&__group {
-		padding: 26px 0 0;
-		display: grid;
-		grid-template-columns: 100px 1fr;
-		gap: 27px;
-		position: relative;
-		align-items: center;
+    @include vp-680 {
+      gap: 10px;
+    }
 
-		@include vp-1 {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding: 0;
-			gap: 0;
-		}
+    .filter-form__group--open & {
+      @include vp-1 {
+        max-height: 300px;
+        padding: 17px 0 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
 
-		@include vp-680 {
-			border-top: 1px solid $color-plain-english;
-		}
+      @include vp-680 {
+        padding: 6px 0 18px;
+      }
+    }
 
-		&--alt {
-			display: flex;
-			padding: 21px 0 0;
-			gap: 18px;
+    .filter-form__group--alt.filter-form__group--open & {
+      @include vp-1280 {
+        padding: 12px 0 23px;
+      }
 
-			@include vp-1 {
-				padding: 0;
-				gap: 0;
-			}
+      @include vp-680 {
+        padding: 8px 0 19px;
+      }
+    }
+  }
 
-			.filter-form__checkbox-list {
-				display: flex;
-				gap: 1px;
+  &__group {
+    padding: 26px 0 0;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 27px;
+    position: relative;
+    align-items: center;
 
-				@include vp-1 {
-					flex-direction: row;
-				}
-			}
-		}
+    @include vp-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      gap: 0;
+    }
 
-		&-title {
-			display: flex;
-			text-transform: uppercase;
-			font-size: 20px;
-			font-weight: 500;
-			line-height: 20px;
-			color: $color-deep-navy;
+    @include vp-680 {
+      border-top: 1px solid $color-plain-english;
+    }
 
-			@include vp-1 {
-				padding: 10px 0;
-			}
+    &--alt {
+      display: flex;
+      padding: 21px 0 0;
+      gap: 18px;
 
-			@include vp-680 {
-				font-weight: 700;
-				font-size: 16px;
-				line-height: 18px;
-			}
+      @include vp-1 {
+        padding: 0;
+        gap: 0;
+      }
 
-			span {
-				display: flex;
+      .filter-form__checkbox-list {
+        display: flex;
+        gap: 1px;
 
-				@include vp-1 {
-					display: none;
-				}
-			}
-		}
+        @include vp-1 {
+          flex-direction: row;
+        }
+      }
+    }
 
-		&-btn {
-			display: none;
-			
-			margin: 0;
-			padding: 0;
-			background-color: transparent;
-			border: none;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 100%;
-			height: 40px;
-			cursor: pointer;
-			align-items: center;
-			justify-content: flex-end;
+    &-title {
+      display: flex;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $color-deep-navy;
 
-			@include vp-1 {
-				display: flex;
-			}
+      @include vp-1 {
+        padding: 10px 0;
+      }
 
-			&-icon {
-				width: 9px;
-				height: 5px;
-				flex-shrink: 0;
-				transition: transform $transition-200;
+      @include vp-680 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+      }
 
-				.filter-form__group--open & {
-					transform: rotate(180deg);
-				}
-			}
-		}
-	}
+      span {
+        display: flex;
+
+        @include vp-1 {
+          display: none;
+        }
+      }
+    }
+
+    &-btn {
+      display: none;
+      
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include vp-1 {
+        display: flex;
+      }
+
+      &-icon {
+        width: 9px;
+        height: 5px;
+        flex-shrink: 0;
+        transition: transform $transition-200;
+
+        .filter-form__group--open & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__btn-submit {
+    display: flex;
+
+    .filter-form--result & {
+      display: none;
+  }
+}
+
+  &__btn-reset {
+    display: none;
+
+      .filter-form--result & {
+        display: flex;
+  }
+  }
+
+  &__result {
+    display: none;
+
+    .filter-form--result & {
+      display: flex;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 0 30px;
+
+      @include vp-1 {
+        padding: 10px 0;
+      }
+
+      @include vp-680 {
+        gap: 10px;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 0 10px;
+      border-bottom: 1px solid $color-plain-english;
+
+      @include vp-1 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &-category {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $color-deep-navy;
+
+      @include vp-680 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    &-value {
+      font-size: 20px;
+      line-height: 20px;
+      color: $color-black;
+
+        @include vp-680 {
+          font-size: 15px;
+      }
+    }
+  }
 }
