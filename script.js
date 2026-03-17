@@ -37,11 +37,11 @@ titles.forEach((title) => {
 });
 
 // лайки
-const likeBtns = document.querySelectorAll('.btn--like');
+const likeBtns = document.querySelectorAll('.btn-like');
 
 likeBtns.forEach((btn) => {
 	btn.addEventListener('click', function () {
-		this.classList.toggle('btn--like--active');
+		this.classList.toggle('btn-like--active');
 	});
 });
 

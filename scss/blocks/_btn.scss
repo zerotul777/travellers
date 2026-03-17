@@ -18,9 +18,9 @@
 	transition: background-color $transition-200;
 
 	@include vp-680 {
+		height: 41px;
 		font-size: 17px;
 		line-height: 17px;
-		height: 41px;
 	}
 
 	&:hover,
@@ -54,58 +54,6 @@
 			font-size: 17px;
 			line-height: 17px;
 			padding: 12px 20px 11px;
-		}
-	}
-
-	// ну тут косяк с названиями, да
-	&--like {
-		border-radius: 50%;
-		width: 50px;
-		height: 50px;
-		padding: 0;
-		background-color: $color-lavander-mist;
-		flex-shrink: 0;
-
-		@include vp-680 {
-			width: 30px;
-			height: 30px;
-		}
-
-		&:hover,
-		&:focus-visible {
-			background-color: $color-misty-rose;
-
-			.btn__like-border {
-				color: $color-red;
-			}
-		}
-
-		&--active {
-			.btn__like-border,
-			.btn__like-red {
-				color: $color-red;
-			}
-		}
-	}
-
-	&__like {
-		&-icon {
-			width: 20px;
-			height: 18px;
-
-			@include vp-680 {
-				width: 12px;
-				height: 10px;
-			}
-		}
-
-		&-red {
-			color: transparent;
-		}
-
-		&-border {
-			color: $color-big-stone;
-			transition: color $transition-200;
 		}
 	}
 }

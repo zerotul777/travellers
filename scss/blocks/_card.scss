@@ -4,6 +4,8 @@
 	width: 100%;
 	background-color: $color-white;
 	border-radius: 20px;
+	position: relative;
+
 
 	@include vp-1280 {
 		display: grid;
@@ -20,7 +22,6 @@
 		flex-direction: column;
 		gap: 14px;
 		padding: 12px 0 23px;
-		position: relative;
 	}
 
 	&__top {
@@ -75,12 +76,14 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
-		max-width: 256px;
+		align-items: flex-start;
+		max-width: 280px;
 		gap: 20px;
 
 		@include vp-1280 {
 			grid-row: span 2;
 			grid-column: 2;
+
 			margin: 44px 0 0;
 			max-width: 100%;
 		}
@@ -91,12 +94,11 @@
 	}
 
 	&__name {
-		width: fit-content;
-		padding: 0 31px 0 0;
 		font-size: 30px;
 		line-height: 30px;
 		font-weight: 700;
 		color: $color-deep-navy;
+		padding: 0 35px 0 0;
 		margin: 0 0 0 4px;
 		position: relative;
 
@@ -117,7 +119,7 @@
 			}
 
 			@include vp-680 {
-				top: 10px;
+				top: 13%;
 				right: 21px;
 				width: 6px;
 				height: 6px;
@@ -139,6 +141,7 @@
 
 		@include vp-680 {
 			order: 0;
+
 			font-size: 20px;
 			line-height: 20px;
 			margin: 0;
@@ -155,14 +158,16 @@
 		line-height: 23px;
 		font-weight: 400;
 		margin: 0 0 0 7px;
+		padding: 0 15px 0 0;
 
 		@include vp-1280 {
 			margin: 0 0 0 30px;
-			padding: 0 10px 0 0;
+			padding: 0 15px 0 0;
 		}
 
 		@include vp-680 {
 			order: 1;
+
 			font-size: 15px;
 			line-height: 18px;
 			padding: 0 50px 0 27px;
@@ -177,7 +182,6 @@
 		margin: 28px 0 0;
 
 		@include vp-1280 {
-			// margin: 28px 0 0;
 			padding: 0 0 0 23px;
 		}
 
@@ -231,20 +235,22 @@
 		position: relative;
 
 		@include vp-1280 {
-			flex-direction: row;
 			grid-row: 2;
 			grid-column: 3;
-			margin: 5px 0 32px;
-			padding: 0 10px 0 30px;
+
+			flex-direction: row;
 			gap: 48px;
+			margin: 5px 0 32px;
+			padding: 0 10px 0 25px;
 		}
 
 		@include vp-680 {
 			order: 3;
+
 			flex-direction: row;
 			justify-content: space-between;
-			padding: 16px 20px 0 22px;
 			border-top: 1px solid $color-ghost-white;
+			padding: 16px 20px 0 22px;
 			margin: 10px 0 0;
 		}
 	}
@@ -259,13 +265,12 @@
 			align-items: center;
 			gap: 5px;
 
-			@include vp-1280 {
+			@include vp-1 {
 				flex-direction: row;
 				gap: 12px;
 			}
 
 			@include vp-680 {
-				flex-direction: row;
 				gap: 1px;
 			}
 		}
@@ -309,7 +314,6 @@
 				font-size: 15px;
 				line-height: 16px;
 				color: $color-dark-gray;
-				position: absolute;
 				top: 0;
 				left: 28px;
 				transform: translateY(-68%);
@@ -354,7 +358,6 @@
 			font-size: 14px;
 			line-height: 14px;
 			color: $color-black-40;
-			position: relative;
 			padding: 1px 3px 0;
 			border-top: 1px solid $color-black-10;
 
@@ -387,11 +390,12 @@
 		@include vp-1280 {
 			border: none;
 			margin: 50px 0 5px;
-			padding: 0 10px 0 30px;
+			padding: 0 10px 0 25px;
 		}
 
 		@include vp-680 {
 			order: 2;
+			
 			padding: 27px 25px 0 25px;
 			margin: 9px 0 0;
 			border-top: 1px solid $color-ghost-white;
@@ -427,15 +431,13 @@
 			gap: 29px;
 			align-items: center;
 
-			@include vp-1280 {
+			@include vp-1 {
 				flex-direction: column;
 				align-items: flex-start;
 				gap: 13px;
 			}
 
 			@include vp-680 {
-				flex-direction: column;
-				align-items: flex-start;
 				gap: 9px;
 			}
 		}

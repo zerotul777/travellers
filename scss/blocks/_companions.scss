@@ -12,11 +12,8 @@
     @include vp-1 {
       grid-column: 1;
       grid-row: 1;
-    }
-
-		@include vp-1280 {
 			gap: 32px;
-		}
+    }
 
 		@include vp-680 {
 			gap: 10px;
@@ -35,7 +32,7 @@
 		}
 
 		@include vp-1360 {
-			gap: 93px;
+			gap: 84px;
 		}
 
 		@include vp-680 {
